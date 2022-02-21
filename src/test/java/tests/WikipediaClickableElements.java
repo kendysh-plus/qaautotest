@@ -16,8 +16,12 @@ public class WikipediaClickableElements extends BasePage {
 
     @Test
     public void checkClickableElements() {
-        actionsWithOurWebElements.clickElement("MediaWiki");
-        actionsWithOurWebElements.clickElement("English");
+        mainPage.pressButtonWithLanguage("RU");
+        actionsWithOurWebElements.clickElement("Заглавная страница");
+        actionsWithOurWebElements.clickElement("Рубрикация");
+        actionsWithOurWebElements.clickElement("Форум");
+        actionsWithOurWebElements.clickElement("История");
+        actionsWithOurMultipleWebElements.clickElement("Обсуждение", 2);
     }
 
 }
